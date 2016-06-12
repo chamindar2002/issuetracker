@@ -1,0 +1,137 @@
+/* 
+    Document   : scores_enclosed
+    Created on : 02-Aug-2013, 10:43:16
+    Author     : chaminda
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.hidden_div{
+/*       display:none;*/
+
+display:none; /* Hide the DIV */
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6 */  
+	height:110px;  
+	width:820px;  
+	background:#99CCFF; 
+        opacity:0.9;
+	left: 170px;
+	top: 50%;
+	z-index:100; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+	margin-left: 15px;  
+	
+	/* additional features, can be omitted */
+	border:2px solid #3366FF;  	
+	padding:15px;  
+	font-size:15px;  
+	-moz-box-shadow: 0 0 5px #3366FF;
+	-webkit-box-shadow: 0 0 5px #3366FF;
+	box-shadow: 0 0 5px #3366FF;
+        
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+   }
+
+.hidden_div a{
+    text-decoration: none;
+    padding: 3px;
+    background: #f1f1f1;
+    color:#000;
+    border:1px solid #ccc;
+    margin-top:15px;
+}
+   
+.label_headings_enclosed{
+        background:#CCFFCC;
+        width:30px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .spec_itm_yardage_enclosed{
+        background:#FFFFB8;
+        width:30px;
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .spec_itm_par_enclosed{
+        background:#EBD6FF;
+        width:30px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .spec_itm_index_enclosed{
+        background:#FFE0C2;
+        width:30px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .score_items_gross_enclosed{
+        background:#f3f3f3;
+        width:30px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #f1f1f1;
+    }
+
+    .score_items_adjusted_enclosed{
+        background:#ccc;
+        width:30px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #f1f1f1;
+    }
+
+    #scores_display{
+
+        /*border:1px solid black;*/
+        height:150px;
+        overflow:scroll;
+        display:none;
+
+    }
+    
+    
+    

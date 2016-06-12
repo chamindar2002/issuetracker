@@ -1,0 +1,734 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: #EFEFEF;
+
+}
+
+.container{
+    margin-left:auto;
+    margin-right:auto;
+    width:1000px;
+    
+    background:#ffffff;
+}
+
+.header{
+    height:100px;
+    /*border:1px solid #000;*/
+}
+
+.content{
+    margin-top:5px;
+    /*border:1px solid #000;*/
+    padding-left:10px;
+    padding-right:10px;
+    height:auto;
+    
+}
+
+.logo1{
+   /* margin-top:5px;*/
+    padding-top:10px;
+    padding-left:10px;
+    /*margin-bottom:5px;*/
+    height:90px;
+    width:200px;
+
+    float:left;
+   /* border: 1px solid #000;*/
+}
+
+#language_selector{
+    /*background:fuchsia;*/
+    width:200px;
+    height:90px;
+    padding-top:10px;
+    padding-left:10px;
+    float:right;
+}
+
+#footer{
+    /*border:1px solid black;*/
+    height:80px;
+    text-align:left;
+    /*color:#ccc;*/
+    font-size:10px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:20px;
+    border-top:1px solid #f1f1f1;
+    padding:5px;
+
+}
+
+#footer_right_div{
+    float:left;
+    width:50%;
+    text-align:right;
+
+}
+
+#footer_left_div{
+    
+    float:left;
+    width:50%;
+}
+/* ----------------------------------------------------mainmenu----------------------------------------------------*/
+#menu-top{
+    /*border:1px solid blue;*/
+    text-align:right;
+}
+
+#menu-top ul
+{
+	padding:6px 20px 5px 20px;
+	margin:0px;
+}
+
+#menu-top ul li
+{
+	display: inline;
+}
+
+/* dark superman blue: #121c28 */
+/* superman red: #c3352b */
+/* superman yellow: #fdf4a5 */
+
+#menu-top ul li a
+{
+	color:#fff;
+	/*background-color:transparent;*/
+        background-color:#66A3FF;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 8px;
+}
+
+#menu-top ul li a:hover, #mainmenu ul li.active a
+{
+	color: #fff;
+	/*background-color:#999999;*/
+        background-color:#91BDFF;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------------End Mainmenu----------------------------------------------------*/
+
+/* ----------------------------------------------------submenu----------------------------------------------------*/
+
+#submenu{
+    text-align:left;
+    /*border:1px solid black;*/
+}
+
+#submenu ul li
+{
+	display: inline;
+}
+
+#submenu ul
+{
+	/*padding:6px 20px 5px 20px;*/
+        padding:6px 20px 5px 0px;
+	margin:0px;
+}
+
+#submenu ul li a
+{
+	color:#454545;
+	/*background-color:transparent;*/
+        background-color:#E6E6E6;
+	font-size:12px;
+	/*font-weight:bold;*/
+	text-decoration:none;
+	padding:5px 8px;
+        margin:1px
+}
+
+#submenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #fff;
+	/*background-color:#999999;*/
+        background-color:#A2A2A2;
+	text-decoration:none;
+}
+/* ----------------------------------------------------End Submenu----------------------------------------------------*/
+input[type=submit],input[type=button]{
+    /*background:#0099CC;*/
+    background:#A9A9A9;
+    border:0px solid #006699;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#fff;
+}
+
+.cancel_button{
+    
+    margin-left:30px;
+    text-decoration:none;
+    background:#A9A9A9;
+    border:0px solid #006699;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#fff;
+}
+
+.login-left{
+    width:550px;
+   
+    /*border:1px solid blue;*/
+    
+     float:left;
+    
+     
+}
+
+.login-right{
+    
+    
+    width:410px;
+    border-left:1px solid #f1f1f1;
+    /*border:1px solid fuchsia;*/
+    padding-left:10px;
+    
+    /*margin-left:540px;*/
+    margin-top:0;
+
+    float:left;
+    
+}
+
+.clear { clear: both;}
+
+/*-------------------------------------social media logins ----------------------------*/
+.socialmedialogins{
+    /*background:#ccc;*/
+    width:410px;
+    height:auto;
+}
+
+#socialmediabutton_fb{
+    /*position:absolute;
+    top:388px;
+    left:800px;*/
+
+    /*top:170px;
+    left:150px;*/
+    float:left;
+    margin:2px;
+}
+
+#socialmediabutton_twitter{
+    /*position:absolute;
+    top:388px;
+    left:960px;*/
+    /*top:170px;
+    left:330px;*/
+    float:left;
+    margin:2px;
+}
+/*-------------------------------------social media logins ----------------------------*/
+
+div.view
+{
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #C9E0ED;
+}
+
+#box-pushdown{
+    /*border:1px solid black;*/
+    height:300px;
+}
+
+h1{
+    font-size:16px;
+    font-weight:bold;
+}
+
+/*tr td{
+    border:1px solid black;
+}*/
+
+/*---------------------------------styles for operations sub menu---------------------------------------------*/
+.portlet-content{
+    margin: 0 0 15px 0;
+	/*padding: 5px 8px;*/
+        padding: 5px 0px;
+	/*background:#EFFDFF;*/
+       /* background:#D7D7D7;*/
+}
+
+.portlet-content ul li
+{
+	display: inline;
+}
+
+.portlet-content ul li a
+{
+	color:#454545;
+	/*background-color:transparent;*/
+        background-color:#E6E6E6;
+	font-size:12px;
+	/*font-weight:bold;*/
+	text-decoration:none;
+	padding:5px 8px;
+        margin:1px
+}
+
+.portlet-content ul li a:hover, #mainmenu ul li.active a
+{
+	color: #fff;
+	/*background-color:#999999;*/
+        background-color:#A2A2A2;
+	text-decoration:none;
+}
+
+.operations
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+/*---------------------------------End styles for operations sub menu---------------------------------------------*/
+
+
+/*---------------------------------Member Scores Entry -----------------------------------------------------------*/
+#cspec_top{
+    background:#E0F0FF;
+    padding:5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom:5px;
+}
+#cspec_top tr td{
+    /*border:1px solid blue;*/
+}
+
+#hole_lables_holder{
+    background:#ccc;
+    /*width:468px;*/
+    width:572px;
+    height:29px;
+}
+
+
+
+#hole_no_label{
+    background:#f1f1f1;
+    width:50px;
+    height:25px;
+    margin:1px;
+    text-align:center;
+    font-weight:bold;
+    padding-top:2px;
+    float:left;
+}
+
+.div_par_index_holder{
+    /*background:#E0FFEB;*/
+    background:#fff;
+    width:468px;
+    height:56px;
+}
+
+.div_par_index_holder{
+    /*background:#E0FFEB;*/
+    background:#fff;
+    width:468px;
+    height:56px;
+}
+
+.div_par_index_holder input[type=text]{
+    background:#f1f1f1;
+    border:0;
+    outline:0;
+    text-align:center;
+}
+
+#par_values{
+
+  background:#C1C1C1;
+  width:50px;
+  height:25px;
+  margin:1px;
+  text-align:center;
+  font-weight:bold;
+  padding:0px;
+  float:left;
+}
+
+#index_values{
+  background:#9A9A9A;
+  width:50px;
+  height:25px;
+  margin:1px;
+  text-align:center;
+  font-weight:bold;
+  padding:0px;
+  float:left;
+}
+/*---------------------------------End Member Scores Entry -----------------------------------------------------------*/
+
+
+/*--------------------------------Get Scores list view styles ---------------------------------------------------*/
+.spec_value_holder{
+    
+    margin:1px;
+    /*background:fuchsia;*/
+    float:left;
+        height:23px;
+}
+
+.spec_value_holder input[type=text]{
+    
+}
+
+#scoreview_hole_label{
+        background:#f1f1f1;
+        width:30px;
+        height:20px;
+        margin:1px;
+        text-align:center;
+        font-weight:bold;
+        padding-top:2px;
+        float:left;
+    }
+
+  /* .tbl_scores tr td{
+        border:1px solid blue;
+    }*/
+  
+
+    .tbl_scores a{
+        text-decoration:none;
+    }
+
+    .score_items_gross{
+        background:#f3f3f3;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #f1f1f1;
+    }
+
+    .score_items_adjusted{
+        background:#ccc;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #f1f1f1;
+    }
+
+    .label_headings{
+        background:#CCFFCC;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .label_headings_extended{
+        background:#CCFFCC;
+        /*width:32px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+    .spec_itm_yardage{
+        background:#FFFFB8;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .spec_itm_par{
+        background:#EBD6FF;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+
+    .spec_itm_index{
+        background:#FFE0C2;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+    }
+/*--------------------------------end of Get Scores list view styles---------------------------------------------*/
+
+/*---------------------------------------misc----------------------------------------------------*/
+.flash-error{
+    background:#FFB2B2;
+    border: 2px solid #FF6666;
+    color:#000;
+    padding:2px;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash-success{
+    background:#99FF99;
+    border: 2px solid #009900;
+    color:#000;
+    padding:2px;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr{
+    color:#ffffff;
+}
+/*---------------------------------------end of misc----------------------------------------------------*/
+
+/*----------------------------------------language drop down--------------------------------------------*/
+
+
+.language_dropdown{
+        border:1px solid #ccc;
+        width:180px;
+
+        background: transparent;
+        padding: 2px;
+        color:#8F8F8F;
+
+        
+    }
+
+ .en{
+        background: url('/myapp/themes/images/flag_icons/flag_UK.png');
+        background-repeat : no-repeat;
+        padding-left: 25px;
+        margin:2px;
+        width:100px;
+    }
+
+    .fr{
+        background: url('/myapp/themes/images/flag_icons/flag_FR.png');
+        background-repeat : no-repeat;
+        padding-left: 25px;
+        margin:2px;
+        width:100px;
+    }
+/*--------------------------------------End language drop down--------------------------------------------*/
+
+
+.disabledtextbox{
+    background: #B2B2B2;
+    border:1px solid #ccc
+}
+
+#tbl_score_summary {
+
+  
+    
+}
+
+
+/*-------------------------------------------------------------------*/
+        .greyed_out{
+    /*background:#0099CC;*/
+    background:#f1f1f1;
+    border:1px solid #ccc;
+    cursor: pointer;
+    
+}
+
+.edit_save_links_placeholder{
+    display: none;
+    
+}
+
+.edit_save_links_placeholder a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.edit_save_links_placeholder a:hover{
+        color: #7A7A7A;
+}
+
+.view_edit_links_holder{
+    
+    float:right;
+}
+
+.view_edit_links_holder{
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+}
+
+.save_cancel_button_holder{
+    display: none; 
+}
+/*-------------------------------------------------------------------*/
+    
+    
+/*---------------------------------styles from greenforest theme------------------------------------------------*/
+.tblgcourse{
+        border:2px solid #ccc;
+        background:#f1f1f1;
+    }
+
+/*
+    .tblgcourse td,th{
+        border:1px solid blue;
+        background:#ccc;
+    }
+*/
+
+
+
+.tblparindex input[type=text]{
+    background:#f1f1f1;
+    border:0;
+    outline:0;
+    text-align:center;
+}
+
+
+.cells_{
+            border:1px solid #ccc;
+            margin-top:1px;
+            display:block;
+            height:25px;
+            
+        }
+
+
+        .cells_inline{
+            border:1px solid #ccc;
+            width:50px;
+            margin-top:1px;
+            float:left;
+            height:25px;
+            text-align:center;
+            /*display:inline;*/
+        }
+
+        .cells_inline input[type=text]{
+            /*border:0;*/
+            outline:0;
+            height:15px;
+            /*width:100px;*/
+        }
+
+        .cells_inline_index_column{
+            border:1px solid #ccc;
+            width:50px;
+            margin-top:1px;
+            float:left;
+            height:25px;
+            text-align:center;
+            background:#99FF99;
+        }
+
+        .cells_inline_index_column input[type=text]{
+            outline:0;
+            height:15px;
+            border:0;
+            text-align:center;
+
+        }
+
+        .cells_inline_par_column{
+            border:1px solid #ccc;
+            width:50px;
+            margin-top:1px;
+            float:left;
+            height:25px;
+            text-align:center;
+            background:#CCFFFF;
+        }
+
+        .cells_inline_gross_column{
+            border:1px solid #ccc;
+            width:50px;
+            margin-top:1px;
+            float:left;
+            height:25px;
+            text-align:center;
+            background:#EBEBEB;
+        }
+
+        .cells_inline_adjusted_column{
+            border:1px solid #ccc;
+            width:50px;
+            margin-top:1px;
+            float:left;
+            height:25px;
+            text-align:center;
+            background:#F3F3F3
+        }
+
+        .cells_inline_par_column input[type=text]{
+            outline:0;
+            height:15px;
+            border:0;
+            text-align:center;
+
+        }
+
+/*----------------------------------------------------------------------------------*/

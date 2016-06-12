@@ -1,0 +1,197 @@
+truncate `user_role_ref`;
+truncate `user`;
+
+INSERT INTO `user` (`uid`, `enabled`, `loginname`, `familyname`, `firstname`, `password`, `club_id`, `deleted`) VALUES
+(1, 0, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0);
+
+
+INSERT INTO `user_role_ref` (`uid`, `rid`) VALUES
+(1, 1);
+
+
+
+
+
+
+
+
+
+ALTER TABLE  `activity_group` ADD  `deleted` TINYINT NULL DEFAULT  '0' AFTER  `group_name` ;
+
+ALTER TABLE  `activity_subgroup` ADD  `deleted` TINYINT NULL DEFAULT  '0' AFTER  `group_id` ;
+
+ALTER TABLE  `activity_treamentfamily` ADD  `deleted` TINYINT NULL DEFAULT  '0' AFTER  `treatment_familyname` ;
+
+ALTER TABLE  `activity_packages` ADD  `deleted` TINYINT NULL DEFAULT  '0' AFTER  `description` ;
+
+ALTER TABLE  `emp_department` ADD  `deleted` TINYINT NULL DEFAULT  '0' AFTER  `agenda_time_intvl` ;
+
+
+
+
+ALTER TABLE  `agenda_config` ADD  `user_id` INT NOT NULL AFTER  `row_height` ;
+
+ALTER TABLE  `agenda_config` ADD INDEX (  `user_id` ) ;
+
+UPDATE  `club_merged`.`agenda_config` SET  `user_id` =  '1' WHERE  `agenda_config`.`id` =1;
+
+ALTER TABLE  `agenda_config` ADD FOREIGN KEY (  `user_id` ) REFERENCES  `club_merged`.`user` (
+`uid`
+) ON DELETE CASCADE ON UPDATE CASCADE ;
+
+ALTER TABLE  `agenda_config` CHANGE  `id`  `id` INT( 11 ) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  `activity_agenda` ADD  `is_concurrent_booking` TINYINT NULL DEFAULT  '0' AFTER  `addin_parent_agenda_id` ,
+ADD  `concurrent_parent_agenda_id` INT NOT NULL AFTER  `is_concurrent_booking` ;
+ALTER TABLE  `activity_agenda` CHANGE  `concurrent_parent_agenda_id`  `concurrent_parent_agenda_id` INT( 11 ) NULL ;
+
+
+
+../quasargr/www/ioncube_encoder5_8.3/ioncube_encoder
+
+/home/quasargr/www/quasardev/protected/modules/golf/controllers
+
+
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `quasargr_report`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rep_relations`
+--
+
+DROP TABLE IF EXISTS `rep_relations`;
+CREATE TABLE IF NOT EXISTS `rep_relations` (
+  `RELID` int(11) NOT NULL AUTO_INCREMENT,
+  `MODELID` int(11) DEFAULT NULL,
+  `TABLE` varchar(30) DEFAULT NULL,
+  `RELATIONSHIP` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`RELID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `rep_relations`
+--
+
+INSERT INTO `rep_relations` (`RELID`, `MODELID`, `TABLE`, `RELATIONSHIP`) VALUES
+(1, 1, 'inv_item', NULL),
+(2, 1, 'inv_color', '`inv_item`.`color`=`inv_color`.`id`'),
+(3, 1, 'inv_size', '`inv_item`.`size`=`inv_size`.`id`'),
+(4, 4, 'invoice', NULL),
+(5, 4, 'member', '`invoice`.`mid`=`member`.`mid`'),
+(6, 5, 'testpay', NULL),
+(7, 5, 'invoice', '`invoice`.`inv_no`=`testpay`.`invr_no`'),
+(9, 4, 'user', '`user`.`uid`=`invoice`.`user_id`'),
+(10, 4, 'inv_item', '`inv_item`.`code` = `invoice_items`.`item_code` '),
+(11, 4, 'inv_category', '`inv_item`.`category_id` = `inv_category`.`id`'),
+(12, 4, 'invoice_items', '`invoice_items`.`inv_no`=`invoice`.`inv_no`');
+SET FOREIGN_KEY_CHECKS=1;
+
+
+
+
+SELECT 
+
+`invoice`.`inv_no` AS `Invoice Number` , 
+
+`invoice`.`inv_date` AS `Invoice Date` , 
+
+SUM( `invoice`.`full_total` ) AS `Total` , 
+
+`inv_category`.`description` AS `Product Categories`
+
+FROM `invoice`
+
+JOIN `member` ON `invoice`.`mid` = `member`.`mid`
+
+JOIN `user` ON `user`.`uid` = `invoice`.`user_id`
+
+JOIN `invoice_items` ON `invoice_items`.`inv_no` = `invoice`.`inv_no`
+
+JOIN `inv_item` ON `inv_item`.`code` = `invoice_items`.`item_code`
+
+JOIN `inv_category` ON `inv_category`.`id` = `inv_item`.`category_id`
+
+
+GROUP BY `inv_category`.`description`
+ORDER BY `inv_category`.`description`
+
+
+
+
+SELECT 
+
+`invoice`.`inv_no` AS `Invoice Number` , 
+
+`invoice`.`inv_date` AS `Invoice Date` , 
+
+SUM( `invoice`.`full_total` ) AS `Total` , 
+
+`inv_category`.`description` AS `Product Categories`
+
+FROM `invoice`
+
+JOIN `member` ON `invoice`.`mid` = `member`.`mid`
+
+JOIN `user` ON `user`.`uid` = `invoice`.`user_id`
+
+JOIN `invoice_items` ON `invoice_items`.`inv_no` = `invoice`.`inv_no`
+
+JOIN `inv_item` ON `inv_item`.`code` = `invoice_items`.`item_code`
+
+JOIN `inv_category` ON `inv_category`.`id` = `inv_item`.`category_id`
+
+
+GROUP BY `inv_category`.`description`
+ORDER BY `inv_category`.`description`
+
+
+
+
+
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `quasargr_report`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rep_relations`
+--
+
+DROP TABLE IF EXISTS `rep_relations`;
+CREATE TABLE IF NOT EXISTS `rep_relations` (
+  `RELID` int(11) NOT NULL AUTO_INCREMENT,
+  `MODELID` int(11) DEFAULT NULL,
+  `TABLE` varchar(30) DEFAULT NULL,
+  `RELATIONSHIP` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`RELID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `rep_relations`
+--
+
+INSERT INTO `rep_relations` (`RELID`, `MODELID`, `TABLE`, `RELATIONSHIP`) VALUES
+(1, 1, 'inv_item', NULL),
+(2, 1, 'inv_color', '`inv_item`.`color`=`inv_color`.`id`'),
+(3, 1, 'inv_size', '`inv_item`.`size`=`inv_size`.`id`'),
+(4, 4, 'invoice', NULL),
+(5, 4, 'member', '`invoice`.`mid`=`member`.`mid`'),
+(6, 5, 'testpay', NULL),
+(7, 5, 'invoice', '`invoice`.`inv_no`=`testpay`.`invr_no`'),
+(9, 4, 'user', '`user`.`uid`=`invoice`.`user_id`'),
+(10, 4, 'inv_item', '`inv_item`.`code` = `invoice_items`.`item_code` '),
+(11, 4, 'inv_category', '`inv_item`.`category_id` = `inv_category`.`id`'),
+(12, 4, 'invoice_items', '`invoice_items`.`inv_no`=`invoice`.`inv_no`');
+SET FOREIGN_KEY_CHECKS=1;

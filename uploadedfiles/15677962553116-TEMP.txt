@@ -1,0 +1,470 @@
+INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'golfClubConfig', 'create', '', '0');
+
+INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'golfClubConfig', 'index', '', '0'), (NULL, 'golfClubConfig', 'update', '', '0');
+
+INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'golfClubConfig', 'view', '', '0');
+
+
+
+INSERT INTO `golfclub`.`lng_module` (`module_id`, `module_name`) VALUES (NULL, 'golfClubConfig');
+
+
+
+
+INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '23', 'Golf Club', NULL), (NULL, '23', 'Date Format', NULL), (NULL, '23', 'Member_Name_Editable', 'Allow Modifiying Member Name Display Format'), (NULL, '23', 'Club Logo', NULL), (NULL, '23', 'Create Configuration', NULL);
+
+UPDATE  `golfclub`.`lng_text_english` SET  `english_lebel_text` =  'Site Configuration' WHERE  `lng_text_english`.`english_label_id` =319;
+
+INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '19', 'Site Configuration', NULL);
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '23', 'File Dimensions', 'Logo Size: 90 X 200 (pixels), Type: JPG');
+
+INSERT INTO `aranxac1_cccgadb`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '19', 'tip_siteconfig', 'Site Configuration');
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'statesProvinces', 'index', '', '0'), (NULL, 'statesProvinces', 'create', '', '0');
+
+INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'statesProvinces', 'update', '', '0'), (NULL, 'statesProvinces', 'view', '', '0');
+
+
+INSERT INTO `golfclub`.`lng_module` (`module_id`, `module_name`) VALUES (NULL, 'statesProvinces');
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '24',  'States Provinces', NULL
+), (
+NULL ,  '24',  'State Province Name', NULL
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '24',  'State Province Code', NULL
+), (
+NULL ,  '24',  'State Province Id', NULL
+);
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '24',  'Update State Province', NULL
+), (
+NULL ,  '24',  'Create State Province', NULL
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '24',  'View State Province', NULL
+), (
+NULL ,  '24',  'List State Province', NULL
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '24',  'Delete State Province', NULL
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '19',  'States Provinces', NULL
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '19',  'tip_stateprovince',  'Manage States/Provinces'
+);
+
+
+
+
+
+
+//----------------------------------------16/08/2013---------------------------------------------------------------
+*ALTER TABLE  `golf_union` CHANGE  `address2`  `address2` VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+
+*ALTER TABLE  `golf_union` CHANGE  `state`  `state` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+
+
+*ALTER TABLE  `golf_club` CHANGE  `gc_manager_name`  `gc_manager_name` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ,
+CHANGE  `gc_director_name`  `gc_director_name` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ,
+CHANGE  `gc_proffessional`  `gc_proffessional` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+
+*ALTER TABLE  `golf_club` ADD  `manager_email` VARCHAR( 30 ) NULL AFTER  `gc_manger_phone_no` ;
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '5', 'Must_be_number', 'Must be a number');
+
+
+//-----------------------------------------------------------------------------------------------------------------
+
+
+*UPDATE  `golfclub`.`role` SET  `name` =  'Language Manager' WHERE  `role`.`rid` =4;
+
+
+*ALTER TABLE  `member_scores` ADD  `session_id` VARCHAR( 32 ) NULL AFTER  `added_date` ;
+
+*ALTER TABLE  `member_scores` ADD  `created_date` DATE NULL AFTER  `session_id` ;
+
+
+
+*ALTER TABLE  `states_provinces` CHANGE  `club_id`  `country_id` INT( 11 ) NULL DEFAULT  '0';
+----------------------------------
+*ALTER TABLE  `states_provinces` CHANGE  `country_id`  `country_id` INT( 11 ) NOT NULL ;
+
+
+
+//----------------------------------------------------------------------------------------------
+*INSERT INTO `golfclub`.`lng_languages` (`language_code`, `language_desc`) VALUES ('my', 'Burmese');
+
+*INSERT INTO `golfclub`.`lng_languages` (`language_code`, `language_desc`) VALUES ('km', 'Cambodian'), ('lo', 'Laothian');
+
+
+//------------------------------------------------03/08/3013------------------------------------------
+*ALTER TABLE  `golf_club` CHANGE  `gc_state`  `gc_state` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+*ALTER TABLE  `member` CHANGE  `state`  `state` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+
+
+ALTER TABLE  `golf_club` CHANGE  `gc_postal_code`  `gc_postal_code` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+ALTER TABLE  `golf_union` CHANGE  `postal_code`  `postal_code` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_bin NULL ;
+ALTER TABLE  `member` CHANGE  `postal_code`  `postal_code` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_bin NULL
+
+
+//-----------------------------------------------04/08/2013------------------------------------------
+
+*ALTER TABLE  `golf_club_config` ADD  `default_state_id` INT NOT NULL AFTER  `member_name_format_editable` ;
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '23', 'Default State', NULL);
+
+ALTER TABLE  `golf_club_config` ADD  `default_country_id` INT NULL AFTER  `default_state_id` ;
+
+UPDATE  `golfclub`.`lng_text_english` SET  `english_lebel_text` =  'Default_State_Country',
+`label_meaning` =  'Default State And Country' WHERE  `lng_text_english`.`english_label_id` =335;
+
+
+//-----------------------------------------------18/09/2013------------------------------------------
+
+*ALTER TABLE  `member_scores` ADD  `utilized_for_combined_score` TINYINT NULL DEFAULT  '0' AFTER  `created_date` ,
+*ADD  `combined_score` TINYINT NULL DEFAULT  '0' AFTER  `utilized_for_combined_score` ;
+
+
+
+
+
+
+ALTER TABLE  `member_scores` ADD  `combined_score_data` BLOB NULL AFTER  `combined_score` ;
+
+//---------------------------------------------7/10/2013----------------------------------------------
+*INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'landinggolfutils', 'index', '', '0');
+*UPDATE  `golfclub`.`action_permission` SET  `module` =  'landingpages' WHERE  `action_permission`.`id` =125;
+
+
+
+//---------------------------------------------14/10/2013---------------------------------------------
+
+*INSERT INTO `golfclub`.`lng_module` (`module_id`, `module_name`) VALUES (NULL, 'LandingPages');
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '10', 'Club Members', NULL);
+
+*UPDATE  `golfclub`.`lng_text_english` SET  `label_meaning` =  'Back' WHERE  `lng_text_english`.`english_label_id` =245;
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '25', 'tab_club_members', 'Club Members'), (NULL, '25', 'tab_members', 'Members');
+
+
+*INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '25',  'tab_association',  'Association'
+), (
+NULL ,  '25',  'tab_club_types',  'Golf Club Types'
+);
+
+
+
+*INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '25',  'tab_clubs',  'Golf Clubs'
+), (
+NULL ,  '25',  'tab_courses',  'Golf Courses'
+);
+
+
+*INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '25',  'tab_tees',  'Tees'
+);
+
+
+
+*INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '2',  'Update', NULL
+);
+
+
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '25', 'tab_countries', 'Countries'), (NULL, '25', 'tab_state_province', 'States/Provinces'), (NULL, '25', 'tab_siteconfig', 'Site Configuration');
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '25', 'tab_languagemanager', 'Language Manager');
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '16', 'role_name', 'User Role Name');
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '25', 'tab_userroles', 'User Roles'), (NULL, '25', 'tab_users', 'Users');
+
+
+*INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '25', 'tab_usrrolerefs', 'User Role Refs');
+
+
+
+
+*UPDATE  `golfclub`.`action_permission` SET  `action` =  'membermanagertabs' WHERE  `action_permission`.`id` =125;
+
+
+*INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'LandingPages', 'golfutilstabs', '', '0'), (NULL, 'LandingPages', 'configutiltabs', '', '0');
+
+
+*INSERT INTO `golfclub`.`action_permission` (`id`, `module`, `action`, `description`, `systemid`) VALUES (NULL, 'LandingPages', 'usermanagertabs', '', '0');
+
+
+
+
+//-------------------------------------18/10/2013------------------------------------------------------
+
+ALTER TABLE  `lng_languages` ADD  `language_order` INT NULL DEFAULT  '0' AFTER  `language_desc` ;
+
+
+
+//-------------------------------------19/11/2013------------------------------------------------------
+
+INSERT INTO  `golfclub`.`lng_module` (
+`module_id` ,
+`module_name`
+)
+VALUES (
+NULL ,  'empDepartment'
+);
+
+INSERT INTO  `golfclub`.`lng_module` (
+`module_id` ,
+`module_name`
+)
+VALUES (
+NULL ,  'empEmployees'
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '26',  'employee_designation',  'Employee Designation'
+), (
+NULL ,  '26',  'employee_department',  'Employee Department'
+), (
+NULL ,  '26',  'employee_number',  'Employee Number'
+), (
+NULL ,  '26',  'employee_hire_date',  'Hire Date'
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '27',  'Department Name', NULL
+);
+
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '25',  'tab_employees',  'Employees'
+), (
+NULL ,  '25',  'tab_departments',  'Departments'
+);
+
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '2',  'List', NULL
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '2',  'Delete', NULL
+)
+
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+ `english_label_id` ,
+ `module_id` ,
+ `english_lebel_text` ,
+ `label_meaning`
+)
+VALUES (
+NULL ,  '2',  'Date', NULL
+)
+
+
+INSERT INTO  `golfclub`.`lng_module` (
+`module_id` ,
+`module_name`
+)
+VALUES (
+NULL ,  'cabinReservations'
+);
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '28',  'Thearapists', NULL
+), (
+NULL ,  '28',  'Book Now', NULL
+);
+
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+ `english_label_id` ,
+ `module_id` ,
+ `english_lebel_text` ,
+ `label_meaning`
+)
+VALUES (
+NULL ,  '28',  'Booking Details', NULL
+)
+
+
+
+INSERT INTO `golfclub`.`lng_text_english` (
+`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`
+)
+ VALUES (NULL, '28', 'Available', NULL), (NULL, '28', 'Booked', NULL);
+
+
+INSERT INTO `golfclub`.`lng_module` (`module_id`, `module_name`) VALUES (NULL, 'SpaCabinSessions');
+
+
+INSERT INTO  `golfclub`.`lng_text_english` (
+`english_label_id` ,
+`module_id` ,
+`english_lebel_text` ,
+`label_meaning`
+)
+VALUES (
+NULL ,  '29',  'Cabin Session', NULL
+), (
+NULL ,  '29',  'Start Time', NULL
+), (
+NULL ,  '29',  'End Time', NULL
+);
+
+
+INSERT INTO `golfclub`.`lng_module` (`module_id`, `module_name`) VALUES (NULL, 'spaCabins');
+
+INSERT INTO `golfclub`.`lng_text_english` (`english_label_id`, `module_id`, `english_lebel_text`, `label_meaning`) VALUES (NULL, '25', 'tab_cabinbooking', NULL), (NULL, '25', 'tab_cabinsession', NULL), (NULL, '25', 'tab_cabins', NULL);

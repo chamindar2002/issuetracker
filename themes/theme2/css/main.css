@@ -1,0 +1,517 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #403F3D;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	/*background: #EFEFEF;*/
+        
+
+}
+
+#container{
+    width:100%;
+    
+    
+}
+
+#header{
+    height:100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5B5B5D), to(#2C292A));
+   
+    background-image: -moz-radial-gradient(center, ellipse cover, #008000 0%, #add8e6 100%); /* FF3.6+ */
+    
+}
+
+.logo1 {
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    height: 80px;
+    width: 200px;
+    float: left;
+    /*border: 1px solid #000;*/
+}
+
+.content{
+    background:#B7D7CD;
+    padding:10px;
+    height:auto;
+}
+
+#footer{
+    padding-top:2px;
+    height:20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#D7D1BF), to(#F3F1EA));
+    font-size: 11px;
+}
+
+.clear { clear: both;}
+
+
+#language_selector{
+/*    background:fuchsia;*/
+    width:200px;
+    height:25px;
+    float:right;
+    
+    margin-top:30px;
+    margin-right:15px;
+}
+
+/* ----------------------------------------------------mainmenu----------------------------------------------------*/
+#menu-top{
+    /*border:1px solid blue;*/
+    text-align:right;
+    
+}
+
+#menu-top ul
+{
+	padding:6px 15px 5px 20px;
+	margin:0px;
+        background:#f1f1f1;
+}
+
+#menu-top ul li
+{
+	display: inline;
+}
+
+/* dark superman blue: #121c28 */
+/* superman red: #c3352b */
+/* superman yellow: #fdf4a5 */
+
+#menu-top ul li a
+{
+	color:#fff;
+	/*background-color:transparent;*/
+        background-color:#66A3FF;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 8px;
+}
+
+#menu-top ul li a:hover, #mainmenu ul li.active a
+{
+	color: #fff;
+	/*background-color:#999999;*/
+        background-color:#91BDFF;
+	text-decoration:none;
+}
+
+/* ----------------------------------------------------End Mainmenu----------------------------------------------------*/
+
+#box-pushdown{
+    /*border:1px solid black;*/
+    height:300px;
+}
+
+/* ----------------------------------------------------submenu----------------------------------------------------*/
+
+#submenu{
+    text-align:left;
+    /*border:1px solid black;*/
+}
+
+#submenu ul li
+{
+	display: inline;
+}
+
+#submenu ul
+{
+	/*padding:6px 20px 5px 20px;*/
+        padding:6px 20px 5px 0px;
+	margin:0px;
+}
+
+#submenu ul li a
+{
+	color:#454545;
+	/*background-color:transparent;*/
+        background-color:#E6E6E6;
+	font-size:12px;
+	/*font-weight:bold;*/
+	text-decoration:none;
+	padding:5px 8px;
+        margin:1px
+}
+
+#submenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #fff;
+	/*background-color:#999999;*/
+        background-color:#A2A2A2;
+	text-decoration:none;
+}
+/* ----------------------------------------------------End Submenu----------------------------------------------------*/
+
+
+/*---------------------------------styles for operations sub menu---------------------------------------------*/
+.portlet-content{
+    margin: 0 0 15px 0;
+	/*padding: 5px 8px;*/
+        padding: 5px 0px;
+	/*background:#EFFDFF;*/
+       /* background:#D7D7D7;*/
+}
+
+.portlet-content ul li
+{
+	display: inline;
+}
+
+.portlet-content ul li a
+{
+	color:#454545;
+	/*background-color:transparent;*/
+        background-color:#E6E6E6;
+	font-size:12px;
+	/*font-weight:bold;*/
+	text-decoration:none;
+	padding:5px 8px;
+        margin:1px
+}
+
+.portlet-content ul li a:hover, #mainmenu ul li.active a
+{
+	color: #fff;
+	/*background-color:#999999;*/
+        background-color:#A2A2A2;
+	text-decoration:none;
+}
+
+.operations
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+/*---------------------------------End styles for operations sub menu---------------------------------------------*/
+
+#cspec_top {
+background: #ffffff;
+padding: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin-bottom: 5px;
+}
+
+input[type=text], input[type=password]{
+    border:1px solid #ccc;
+    padding-left:5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+h1{
+    font-size:15px;
+}
+
+.cancel_button {
+margin-left: 30px;
+text-decoration: none;
+background: #A9A9A9;
+border: 0px solid #006699;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+color: #fff;
+}
+
+input[type=submit], input[type=button] {
+background: #0099CC;
+background: #A9A9A9;
+border: 0px solid #006699;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+color: #fff;
+}
+
+
+/*--------------------------------Get Scores list view styles ---------------------------------------------------*/
+.spec_value_holder{
+    
+    margin:1px;
+    /*background:fuchsia;*/
+    float:left;
+        height:23px;
+}
+
+.spec_value_holder input[type=text]{
+    
+}
+
+#scoreview_hole_label{
+        background:#f1f1f1;
+        width:30px;
+        height:20px;
+        margin:1px;
+        text-align:center;
+        font-weight:bold;
+        padding-top:2px;
+        float:left;
+    }
+
+  /* .tbl_scores tr td{
+        border:1px solid blue;
+    }*/
+  
+
+    .tbl_scores a{
+        text-decoration:none;
+    }
+
+    .score_items_gross{
+        background:#f3f3f3;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #f1f1f1;
+        
+        -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+
+    .score_items_adjusted{
+        background:#ccc;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #f1f1f1;
+        
+        -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+
+    .label_headings{
+        background:#CCFFCC;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+        
+        -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+
+    .label_headings_extended{
+        background:#CCFFCC;
+        /*width:32px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+        
+        -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+    .spec_itm_yardage{
+        background:#FFFFB8;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+        
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .spec_itm_par{
+        background:#EBD6FF;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+        
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .spec_itm_index{
+        background:#FFE0C2;
+        /*width:30px;*/
+        width:60px;
+
+        height:20px;
+        margin:1px;
+        text-align:center;
+        /*font-weight:bold;*/
+        padding-top:2px;
+        float:left;
+        border:1px solid #CCC;
+        
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+/*--------------------------------end of Get Scores list view styles---------------------------------------------*/
+
+/*---------------------------------------misc----------------------------------------------------*/
+.flash-error{
+    background:#FFB2B2;
+    border: 2px solid #FF6666;
+    color:#000;
+    padding:2px;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash-success{
+    background:#99FF99;
+    border: 2px solid #009900;
+    color:#000;
+    padding:2px;
+    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr{
+    color:#ffffff;
+}
+/*---------------------------------------end of misc----------------------------------------------------*/
+
+/*---------------------------------------loginform -----------------------------------------------------*/
+.login-left {
+    
+    float:left;
+    width:50%;
+}
+
+.login-right {
+border-left: 1px solid #f1f1f1;
+padding:15px;
+float:left;
+    width:45%;
+}
+
+.clear {
+clear: both;
+}
+/*---------------------------------------end of loginform ----------------------------------------------*/
+
+
+/*-------------------------------------social media logins ----------------------------*/
+.socialmedialogins{
+    /*background:#ccc;*/
+    width:410px;
+    height:auto;
+}
+
+#socialmediabutton_fb{
+    /*position:absolute;
+    top:388px;
+    left:800px;*/
+
+    /*top:170px;
+    left:150px;*/
+    float:left;
+    margin:2px;
+}
+
+#socialmediabutton_twitter{
+    /*position:absolute;
+    top:388px;
+    left:960px;*/
+    /*top:170px;
+    left:330px;*/
+    float:left;
+    margin:2px;
+}
+/*-------------------------------------social media logins ----------------------------*/
+
+.view_edit_links_holder {
+cursor: pointer;
+color: blue;
+
+}
+
+/*-------------------------------------------------------------------*/
+        .greyed_out{
+    /*background:#0099CC;*/
+    background:#f1f1f1;
+    border:1px solid #ccc;
+    cursor: pointer;
+    
+}
+
+.edit_save_links_placeholder{
+    display: none;
+    
+}
+
+.edit_save_links_placeholder a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.edit_save_links_placeholder a:hover{
+        color: #7A7A7A;
+}
+
+.view_edit_links_holder{
+    
+    float:right;
+}
+
+.view_edit_links_holder{
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+}
+
+.save_cancel_button_holder{
+    display: none; 
+}
+
+#score_indicator_symbols{
+    color:red;
+}
+/*-------------------------------------------------------------------*/
