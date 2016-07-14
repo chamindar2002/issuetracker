@@ -8,26 +8,31 @@ class IssuefeedbackController extends Controller
 	}
         
         public function actionAdd(){
-            
+
+
             $model = new Issuefeedback;
             
             if(isset($_POST['txtissueid']))
             {
                 $rnd = substr(number_format(time() * rand(), 0, '', ''), 0, 20);
-                
+
                 
                 //$model->file1 = $_FILES['file1']['name'];
                 $model->comment = $_POST['comments'];
                 $model->issueid = $_POST['txtissueid'];
                 $model->createdby = Yii::app()->user->userId;
                 $model->createddate =  date('Y-m-d h:i:s a', time());
-                
-                
+
                 $uploadedFile = CUploadedFile::getInstanceByName('file1');
+
+
                 $fileName_unstripped = "{$rnd}-{$uploadedFile}";
-                
+
+
                 /*replace white spcase with _)*/
                 $fileName = preg_replace('/\s+/', '_', $fileName_unstripped);
+
+
                 
                 if($uploadedFile != null)
                     $model->file1 = $fileName;
@@ -36,6 +41,8 @@ class IssuefeedbackController extends Controller
                 //echo Yii::app()->basePath.'/uploadedfiles/'.$_FILES['file1']['name'];
                 //exit;
                 if($model->save()){
+
+                    var_dump($model);exit;
                     
                     if($uploadedFile != null){
                                // $uploadedFile->saveAs(Yii::app()->basePath.'/../uploadedfiles/'.$fileName);  // image 
@@ -44,6 +51,9 @@ class IssuefeedbackController extends Controller
                     Issues::model()->alertTeam($model->issueid,'New Comment Added');        
                     $this->redirect(array('issues/view','id'=>$_POST['txtissueid']));
                  }
+
+                var_dump($model->getErrors());
+                Yii::app()->end();
             }
             
         }
